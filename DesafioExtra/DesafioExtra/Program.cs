@@ -26,7 +26,7 @@ namespace DesafioExtra
                 CalculadoraRegra3();
             }
             else {
-                Console.WriteLine("Finalizado com sucesso!");
+                Console.WriteLine("Programa finalizado com sucesso!");
             }
 
         }
