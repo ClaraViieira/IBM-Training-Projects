@@ -17,11 +17,9 @@ namespace DesafioExtra
             if (opcao == 1) {
                 CalculadoraIMC();
             }
-
             else if (opcao == 2) {
                 CalculadoraArea();
             }
-
             else if (opcao == 3)  {
                 CalculadoraRegra3();
             }
