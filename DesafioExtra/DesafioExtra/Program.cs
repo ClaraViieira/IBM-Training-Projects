@@ -10,7 +10,7 @@ namespace DesafioExtra
             Console.WriteLine("Escolha uma das opões abaixo: ");
             Console.WriteLine("1 - Calculadora IMC");
             Console.WriteLine("2 - Calculadora Área Círculo");
-            Console.WriteLine("3 - Calculadora regra de 3");
+            Console.WriteLine("3 - Calculadora Regra de 3");
             Console.WriteLine("4 - Sair");
             int opcao = int.Parse(Console.ReadLine());
 
@@ -33,7 +33,7 @@ namespace DesafioExtra
         static void CalculadoraIMC()
         {
             double altura, peso, IMC;
-            Console.WriteLine("Calcular o IMC");
+            Console.WriteLine("Calculadora IMC");
             Console.Write("Digite sua altura: ");
             altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Digite seu peso: ");
@@ -65,8 +65,8 @@ namespace DesafioExtra
         static void CalculadoraArea()
         {
             double raio, area, pi = 3.14159;
-            Console.WriteLine("Calcular a área de um círculo");
-            Console.Write("Digite o raio: ");
+            Console.WriteLine("Calculadora Área Círculo");
+            Console.Write("Digite o raio do círculo: ");
             raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             area = 3.14159 * Math.Pow(raio, 2.0);
             Console.WriteLine("Área do círculo: " + area.ToString("F2", CultureInfo.InvariantCulture));
@@ -75,7 +75,7 @@ namespace DesafioExtra
         static void CalculadoraRegra3()
         {
             int A, B, C, D;
-            Console.WriteLine("Calcular por regra de 3");
+            Console.WriteLine("Calculadora Regra de 3");
             Console.Write("Digite o valor de A: ");
             A = int.Parse(Console.ReadLine());
             Console.Write("Digite o valor de B: ");
