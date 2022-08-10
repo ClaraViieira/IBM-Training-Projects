@@ -13,20 +13,18 @@ namespace DesafioExtra
             Console.WriteLine("3 - Calculadora Regra de 3");
             Console.WriteLine("4 - Sair");
             int opcao = int.Parse(Console.ReadLine());
-
             if (opcao == 1) {
                 CalculadoraIMC();
             }
             else if (opcao == 2) {
                 CalculadoraArea();
             }
-            else if (opcao == 3)  {
+            else if (opcao == 3) {
                 CalculadoraRegra3();
             }
             else {
                 Console.WriteLine("Programa finalizado com sucesso!");
             }
-
         }
         static void CalculadoraIMC()
         {
@@ -59,7 +57,6 @@ namespace DesafioExtra
                 Console.WriteLine("Classificação: Obesidade III (móbida)");
             }
         }
-
         static void CalculadoraArea()
         {
             double raio, area, pi = 3.14159;
@@ -69,7 +66,6 @@ namespace DesafioExtra
             area = 3.14159 * Math.Pow(raio, 2.0);
             Console.WriteLine("Área do círculo: " + area.ToString("F2", CultureInfo.InvariantCulture));
         }
-
         static void CalculadoraRegra3()
         {
             int A, B, C, D;

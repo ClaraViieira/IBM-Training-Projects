@@ -8,33 +8,39 @@ namespace QuintoDesafio
         static void Main(string[] args)
         {
             int DDD = int.Parse(Console.ReadLine());
+            Console.WriteLine(RetornarCidade(DDD));
+        }
+        static string RetornarCidade(int DDD)
+        {
+            string cidade;
             if (DDD == 61) {
-                Console.WriteLine("Brasília");
+                cidade = "Brasilia";
             }
             else if (DDD == 71) {
-                Console.WriteLine("Salvador");
+                cidade = "Salvador";
             }
             else if (DDD == 11) {
-                Console.WriteLine("São Paulo");
+                cidade = "São Paulo";
             }
             else if (DDD == 21) {
-                Console.WriteLine("Rio de Janeiro");
+                cidade = "Rio de Janeiro";
             }
             else if (DDD == 32) {
-                Console.WriteLine("Juiz de Fora");
+                cidade = "Juiz de Fora";
             }
             else if (DDD == 19) {
-                Console.WriteLine("Campinas");
+                cidade = "Campinas";
             }
             else if (DDD == 27) {
-                Console.WriteLine("Vitória");
+                cidade = "Vitoria";
             }
             else if (DDD == 31) {
-                Console.WriteLine("Belo Horizonte");
+                cidade = "Belo Horizonte";
             }
             else {
-                Console.WriteLine("DDD não cadastrado");
+                cidade = "DDD não cadastrado";
             }
+            return cidade;
         }
     }
 }
