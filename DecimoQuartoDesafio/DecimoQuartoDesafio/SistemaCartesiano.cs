@@ -20,5 +20,9 @@ namespace DecimoQuartoDesafio {
             else
                 return "Quarto quadrante";
         }
+        public override string ToString() {
+            string resultado = PlanoCartesiano();
+            return resultado;
+        }
     }
 }

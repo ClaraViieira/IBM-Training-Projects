@@ -8,7 +8,7 @@ namespace DecimoQuartoDesafio {
             int x = int.Parse(valores[0]);
             int y = int.Parse(valores[1]);
             SistemaCartesiano quadrante = new SistemaCartesiano(x, y);
-            Console.WriteLine(quadrante.PlanoCartesiano());
+            Console.WriteLine(quadrante);
         }
     }
 }
