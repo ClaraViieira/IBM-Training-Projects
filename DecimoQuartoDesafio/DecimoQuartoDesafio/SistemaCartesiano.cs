@@ -2,17 +2,23 @@
 
 namespace DecimoQuartoDesafio {
     class SistemaCartesiano {
-        public static void PlanoCartesiano(string[] valores, int x, int y) {
-            if (x == 0 || y == 0)
-                Console.WriteLine("Nulo");
-            else if (x > 0 && y > 0)
-                Console.WriteLine("Primeiro quadrante");
-            else if (x < 0 && y > 0)
-                Console.WriteLine("Segundo quadrante");
-            else if (x < 0 && y < 0)
-                Console.WriteLine("Terceiro quadrante");
-            else if (x > 0 && y < 0)
-                Console.WriteLine("Quarto quadrante");
+        public int X { get; private set; }
+        public int Y { get; private set; }
+        public SistemaCartesiano(int x, int y) {
+            X = x;
+            Y = y;
+        }
+        public string PlanoCartesiano() {
+            if (X == 0 || Y == 0)
+                return "Nulo";
+            else if (X > 0 && Y > 0)
+                return "Primeiro quadrante";
+            else if (X < 0 && Y > 0)
+                return "Segundo quadrante";
+            else if (X < 0 && Y < 0)
+                return "Terceiro quadrante";
+            else
+                return "Quarto quadrante";
         }
     }
 }
