@@ -11,7 +11,7 @@ namespace DecimoQuintoDesafio {
             Y = y;
         }
         public int Soma() {
-            int min, max;
+            int min, max, soma = 0;
             if (X < Y) {
                 min = X;
                 max = Y;
@@ -20,10 +20,9 @@ namespace DecimoQuintoDesafio {
                 min = Y;
                 max = X;
             }
-            int soma = 0;
             for (int i = min + 1; i < max; i++) {
                 if (i % 2 != 0) {
-                    soma = soma + i;
+                    soma += i;
                 }
             } 
             return soma;
