@@ -1,4 +1,5 @@
 ﻿using System;
+using DecimoSetimoDesafio.Entities;
 
 namespace DecimoSetimoDesafio {
     class Program {
@@ -7,7 +8,7 @@ namespace DecimoSetimoDesafio {
             string[] horas = Console.ReadLine().Split(':');
             int hora = int.Parse(horas[0]);
             int minuto = int.Parse(horas[1]);
-            CalculoAtraso atraso = new CalculoAtraso(hora, minuto);
+            CalcularAtraso atraso = new CalcularAtraso(hora, minuto);
             Console.WriteLine(atraso);
         }
     }
