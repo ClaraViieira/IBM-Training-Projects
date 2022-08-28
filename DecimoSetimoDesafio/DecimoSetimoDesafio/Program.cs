@@ -7,7 +7,7 @@ namespace DecimoSetimoDesafio {
             string[] horas = Console.ReadLine().Split(':');
             int hora = int.Parse(horas[0]);
             int minuto = int.Parse(horas[1]);
-            CalcularAtraso atraso = new CalcularAtraso(hora, minuto);
+            Horario atraso = new Horario(hora, minuto);
             Console.WriteLine(atraso);
         }
     }

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace DecimoSetimoDesafio {
-    class CalcularAtraso {
+    class Horario {
         private int Hora { get; set; }
         private int Minuto { get; set; }
 
-        public CalcularAtraso(int hora, int minuto) {
+        public Horario(int hora, int minuto) {
             Hora = hora;
             Minuto = minuto;
         }
 
-        private int Atraso() {
+        private int CalcularAtraso() {
             if (Hora == 7)
                 return Minuto;
             else if (Hora == 8)
@@ -24,7 +24,7 @@ namespace DecimoSetimoDesafio {
         }
 
         public override string ToString() {
-            return "Atraso máximo em minutos: " + Atraso();
+            return "Atraso máximo em minutos: " + CalcularAtraso();
         }
     }
 }
