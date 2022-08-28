@@ -1,5 +1,4 @@
 ﻿using System;
-using DecimoSetimoDesafio.Entities;
 
 namespace DecimoSetimoDesafio {
     class Program {

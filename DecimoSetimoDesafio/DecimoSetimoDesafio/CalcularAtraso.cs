@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DecimoSetimoDesafio.Entities {
+namespace DecimoSetimoDesafio {
     class CalcularAtraso {
-        public int Hora { get; private set; }
-        public int Minuto { get; private set; }
+        private int Hora { get; set; }
+        private int Minuto { get; set; }
+
         public CalcularAtraso(int hora, int minuto) {
             Hora = hora;
             Minuto = minuto;
         }
+
         private int Atraso() {
             if (Hora == 7)
                 return Minuto;
@@ -20,9 +22,9 @@ namespace DecimoSetimoDesafio.Entities {
             else
                 return 0;
         }
+
         public override string ToString() {
-            int resultado = Atraso();
-            return "Atraso maximo em minutos: " + resultado;
+            return "Atraso máximo em minutos: " + Atraso();
         }
     }
 }
