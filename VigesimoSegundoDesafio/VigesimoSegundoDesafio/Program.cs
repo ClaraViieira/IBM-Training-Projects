@@ -6,19 +6,17 @@ namespace VigesimoSegundoDesafio {
             Console.WriteLine("Insira as frases abaixo: ");
             string maiorPalavra = "";
             while (true) {
-                int tamanhoInicial = 0;
                 string frase = Console.ReadLine();
                 string[] palavra = frase.Split(' ');
-                if (frase == "0")
-                    break;
                 foreach (string item in palavra) {
                     int tamanhoPalavra = item.Length;
-                    if (item.Length >= tamanhoInicial) {
-                        tamanhoInicial = item.Length;
+                    if (item.Length >= maiorPalavra.Length) {
                         maiorPalavra = item;
                     }
                     Console.Write(tamanhoPalavra + "-");
                 }
+                if (frase == "0")
+                    break;
                 Console.WriteLine();
             }
             Console.WriteLine("The biggest word: " + maiorPalavra);
