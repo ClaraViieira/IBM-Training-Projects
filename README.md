@@ -1,3 +1,3 @@
-# **PROJETOS**
+# **C# COURSE CONSOLE PROJECTS**
 
-Projetos para as aulas de treinamento de .NET/C# da trilha IBM.
+## Projects in the C# language and .NET platform in console for the classes of the training track of the interns associated with IBM.
