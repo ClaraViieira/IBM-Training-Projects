@@ -7,77 +7,41 @@ namespace DesafioExtra
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Escolha uma das opões abaixo: ");
-            Console.WriteLine("1 - Calculadora IMC");
-            Console.WriteLine("2 - Calculadora Área Círculo");
-            Console.WriteLine("3 - Calculadora Regra de 3");
-            Console.WriteLine("4 - Sair");
-            int opcao = int.Parse(Console.ReadLine());
-            if (opcao == 1) {
-                CalculadoraIMC();
+            Calculadora calc = new Calculadora();
+            string opcao = string.Empty;
+            bool exbirMenu = true;
+
+            while (exbirMenu)
+            {
+                Console.Clear();
+                Console.WriteLine("Escolha uma das opões abaixo: ");
+                Console.WriteLine("1 - Calculadora IMC");
+                Console.WriteLine("2 - Calculadora Área Círculo");
+                Console.WriteLine("3 - Calculadora Regra de 3");
+                Console.WriteLine("4 - Encerrar");
+
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        calc.CalculadoraIMC();
+                        break;
+                    case "2":
+                        calc.CalculadoraArea();
+                        break;
+                    case "3":
+                        calc.CalculadoraRegraTres();
+                        break;
+                    case "4":
+                        exbirMenu = false;
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        break;
+                }
+                Console.WriteLine("Pressione qualquer tecla para continuar...");
+                Console.ReadLine();
             }
-            else if (opcao == 2) {
-                CalculadoraArea();
-            }
-            else if (opcao == 3) {
-                CalculadoraRegra3();
-            }
-            else {
-                Console.WriteLine("Programa finalizado com sucesso!");
-            }
-        }
-        static void CalculadoraIMC()
-        {
-            double altura, peso, IMC;
-            Console.WriteLine("Calculadora IMC");
-            Console.Write("Digite sua altura: ");
-            altura = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Digite seu peso: ");
-            peso = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            IMC = (peso / (altura * altura));
-            if (IMC < 17.0) {
-                Console.WriteLine("Classificação: Muito abaixo do peso");
-            }
-            else if (IMC < 18.49) {
-                Console.WriteLine("Classificação: Abaixo do peso");
-            }
-            else if (IMC < 24.99) {
-                Console.WriteLine("Classificação: Peso normal");
-            }
-            else if (IMC < 29.99) {
-                Console.WriteLine("Classificação: Acima do Peso");
-            }
-            else if (IMC < 34.99) {
-                Console.WriteLine("Classificação: Obesidade I");
-            }
-            else if (IMC < 39.99) {
-                Console.WriteLine("Classfificação: Obesidade II (severa)");
-            }
-            else  {
-                Console.WriteLine("Classificação: Obesidade III (móbida)");
-            }
-        }
-        static void CalculadoraArea()
-        {
-            double raio, area, pi = 3.14159;
-            Console.WriteLine("Calculadora Área Círculo");
-            Console.Write("Digite o raio do círculo: ");
-            raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            area = 3.14159 * Math.Pow(raio, 2.0);
-            Console.WriteLine("Área do círculo: " + area.ToString("F2", CultureInfo.InvariantCulture));
-        }
-        static void CalculadoraRegra3()
-        {
-            int A, B, C, D;
-            Console.WriteLine("Calculadora Regra de 3");
-            Console.Write("Digite o valor de A: ");
-            A = int.Parse(Console.ReadLine());
-            Console.Write("Digite o valor de B: ");
-            B = int.Parse(Console.ReadLine());
-            Console.Write("Digite o valor de C: ");
-            C = int.Parse(Console.ReadLine());
-            D = (B * C) / A;
-            Console.WriteLine("O resultado de D é: " + D);
+            Console.WriteLine("Programa finalizado com sucesso!");
         }
     }
 }
