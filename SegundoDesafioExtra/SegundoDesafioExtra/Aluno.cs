@@ -27,7 +27,7 @@ namespace SegundoDesafioExtra
 
         public void ImprimirTodasMaterias()
         {
-            Console.WriteLine("Insira as notas de matemática, português e geografia respectivamente: ");
+            Console.WriteLine("Insira as notas de matemática, português e geografia, respectivamente, na mesma linha: ");
             string[] notas = Console.ReadLine().Split(' ');
             decimal matematica = decimal.Parse(notas[0], CultureInfo.InvariantCulture);
             decimal portugues = decimal.Parse(notas[1], CultureInfo.InvariantCulture);

@@ -6,7 +6,7 @@ namespace SegundoDesafioExtra
     {
         static void Main(string[] args)
         {
-            Console.Write("Bem vindo ao sistema de notas do alunos!" + "\n" + "Digite o nome do aluno: ");
+            Console.Write("Bem vindo ao sistema de notas dos alunos!" + "\n" + "Digite o nome do aluno: ");
             string nome = Console.ReadLine();
             Console.Write("Digite o endereço do aluno: ");
             string endereco = Console.ReadLine();
